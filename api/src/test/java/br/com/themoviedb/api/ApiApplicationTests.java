@@ -1,10 +1,10 @@
-package br.com.themoviedb.jera;
+package br.com.themoviedb.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JeraApplicationTests {
+class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {
