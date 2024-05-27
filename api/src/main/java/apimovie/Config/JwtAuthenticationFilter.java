@@ -1,4 +1,4 @@
-package apimovie.Config;
+/*package apimovie.Config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
@@ -93,3 +93,4 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         }
     }
 }
+*/

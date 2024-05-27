@@ -3,7 +3,7 @@ package apimovie.ServiceImpl;
 import apimovie.Model.User;
 import apimovie.IService.UserService;
 import apimovie.Repository.UserRepository;
-import apimovie.Config.JwtTokenProvider;
+//import apimovie.Config.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.bcrypt.BCrypt;
@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         userRepository.deleteById(id);
     }
 
-    @Override
+    /*@Override
     public Optional<User> loginUser(String email, String password) {
 
         Optional<User> userOptional = userRepository.findByEmail(email);
@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             }
         }
         return Optional.empty();
-    }
+    }*/
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

@@ -1,4 +1,4 @@
-package apimovie.Config;
+/*package apimovie.Config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -48,3 +48,4 @@ public class JwtTokenProvider {
         return false;
     }
 }
+*/
