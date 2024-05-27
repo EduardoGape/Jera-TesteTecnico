@@ -6,20 +6,16 @@ import apimovie.Repository.UserRepository;
 //import apimovie.Config.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.security.crypto.bcrypt.BCrypt;
-
-
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+/*@Service
+public class UserServiceImpl implements UserService, UserDetailsService {*/
 
 @Service
-public class UserServiceImpl implements UserService, UserDetailsService {
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
@@ -37,7 +33,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Override
     public User createUser(User user) {
         user.setId(UUID.randomUUID().toString());
-        user.setPassword(hashPassword(user.getPassword()));
         return userRepository.save(user);
     }
 
@@ -69,19 +64,19 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return Optional.empty();
     }*/
 
-    @Override
+    /*@Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(username)
             .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + username));
         return user;
     }
-
     private String hashPassword(String password) {
         return BCrypt.hashpw(password, BCrypt.gensalt());
     }
 
     private boolean checkPassword(String plainPassword, String hashedPassword) {
         return BCrypt.checkpw(plainPassword, hashedPassword);
-    }
+    }*/
+    
 }
 
