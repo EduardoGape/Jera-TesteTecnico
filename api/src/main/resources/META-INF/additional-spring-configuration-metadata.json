@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "themoviedb.app.url",
+    "type": "java.lang.String",
+    "description": "A description for 'themoviedb.app.url'"
+  },
+  {
+    "name": "themoviedb.app.token",
+    "type": "java.lang.String",
+    "description": "A description for 'themoviedb.app.token'"
+  }
+]}
